@@ -1,0 +1,975 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 701%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: white;
+    display: flex;
+    overflow: hidden;
+}
+.what-body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    display: flex;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+ ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+ audio,
+ canvas,
+ iframe,
+ img,
+ svg,
+ video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+ fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+ textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+   .browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+ .hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+ .visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+ .invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+ .clearfix:before,
+ .clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/*@media only screen and (min-width: 35em) {
+     Style adjustments for viewports that meet the condition 
+     }*/
+/*
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+/*}
+
+@media only screen and (min-width: 35em) {*/
+    /* Style adjustments for viewports that meet the condition */
+    /*}*/
+
+    /*====================   Custom Css        ================*/
+    @font-face {
+        font-family: 'Helvetica-light'; /*a name to be used later*/
+        src: url('fonts/helvetica-light.otf'); /*URL to font*/
+    }
+    .slides{
+     display: flex;   
+     flex-flow:row wrap;
+     align-items:center;
+     justify-content:flex-start;
+ }
+
+ .flex-item{
+    display: flex;
+}
+
+.header
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 80vw;
+    overflow: hidden;
+    background: transparent;
+    opacity: 0.7;
+    z-index: 1000;
+    flex-direction: row;
+    display: flex;
+    border-top:1px solid #4C4D4F; 
+    margin: 0 10%;
+}
+
+.menu{
+    position: fixed;
+    bottom: 15px;
+    right: 0;
+    z-index: 9999;
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    margin: 0 10%;
+}
+
+.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 ;
+    border-left: 1px solid #ffffff;
+    padding: 0 20px;
+}
+
+.menu li:first-child{
+    border-left:0;
+}
+.menu li:last-child{
+    padding-right: 0;
+}
+
+.menu li a{
+    color: #4C4D4F;
+    text-decoration: none;
+}
+.menu li a:hover{
+    border-bottom:2px solid #ED1C24;
+}
+.menu li a:visited{
+    border-bottom:2px solid #ED1C24;
+}
+.menuBox{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    margin: 6px 0;
+}
+.menuBox:hover{
+    background-color: #EA2327;
+}
+
+.scene-2,.scene-3,.scene-4,.scene-5,.scene-6
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    /*border-right: 1px solid black;*/
+}
+.scene-1,.scene-7
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction:row;
+    /*border-right: 1px solid black;*/
+}
+.scene-container{
+    width: 80%;
+    display: flex;
+    align-self:center;
+}
+.scene-1{
+    /*background-color: white;*/
+}
+.scene-2{
+    /*background-color: white;*/
+}
+.scene-2-text,.scene-3-text,.scene-4-text,.scene-5-text{
+    z-index: 900;
+    margin: 1vw 0;
+}
+.scene-5-text h2{
+    font-size: 3.5rem;
+}
+
+.scene-2-holobox,.scene-3-holobox,.scene-4-holobox,.scene-5-holobox{
+    z-index:800;
+}
+.scene-2-holobox{
+    bottom: 50px;
+    left: 135vw;
+    position: absolute;    
+}
+.scene-3-holobox{
+    bottom: 50px;
+    left: 250vw;
+    position: absolute;
+}
+.scene-4-holobox{
+    bottom: 50px;
+    left: 340vw;
+    position: absolute;
+}
+.scene-5-holobox{
+    bottom: 50px;
+    left: 480vw;
+    position: absolute;
+}
+.scene-2-character,.scene-3-character,.scene-4-character,.scene-5-character{
+    z-index:700;
+}
+
+.scene-2-character{
+    bottom: 50px;
+    left: 165vw;
+    position: absolute;  
+}
+.scene-3-character{
+    bottom: 50px;
+    left: 238vw;
+    position: absolute;
+}
+.scene-4-character{
+    bottom: 50px;
+    left: 355vw;
+    position: absolute;
+}
+.scene-5-character{
+    bottom: 50px;
+    left: 450vw;
+    position: absolute;
+}
+.scene-2-title-img,.scene-3-title-img,.scene-4-title-img,.scene-5-title-img{
+    width:75%; 
+}
+.scene-2-text-img,.scene-3-text-img,.scene-4-text-img,.scene-5-text-img{
+    width:75%;   
+}
+.scene-2-holobox-img,.scene-4-holobox-img{
+    width:28vw;
+}
+.scene-3-holobox-img{
+    width: 45vw;
+}
+.scene-4-holobox-img{
+    width: 22vw;
+}
+.scene-5-holobox-img{
+    width: 10vw;
+}
+.scene-4-character-img{
+    width: 35vw;
+}
+.scene-5-character-img{
+    width:25vw;
+}
+.scene-2-character-img{
+    width: 25vw;
+}
+.scene-3-character-img{
+    width: 20vw;
+}
+.scene-3{
+    /*background-color: white;*/
+}
+.scene-4{
+    /*background-color: white;*/
+}
+.scene-5{
+    /*background-color: white;*/
+}
+.scene-6{
+    /*background-color: white;*/
+}
+.scene-6-sub:nth-child(1){
+    width: 20%;
+}
+.scene-6-sub:nth-child(2){
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.scene-6-video-div{
+    display: flex;
+    flex-direction: column;
+}
+.scene-6-video-img{
+    width: 50vw;
+    display: flex;
+    align-self: center; 
+}
+.scene-6-input-div{
+    display: flex;
+    align-self: center;
+    /* margin: 2vh; */
+}
+#obmSubscriberInput {
+    height: 30px;
+    padding: 5px;
+    font-size: 20px;
+    width: 25vw;
+}
+.submit-btn{
+    height: 44px;
+    vertical-align: super;
+    background-color: #EA2327;
+    color: white;
+    border: none;
+    width: 125px;
+}
+
+.scene-7{
+    /*background-color: white;*/
+}
+.big-image-div,.big-image-div-2{
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+.big-image-logo,.big-image-logo-2{
+    width: 40vw;
+    position: absolute;
+    bottom: 50px;
+}
+.obm-logo-div,.obm-logo-div-2{
+    width: 30%;
+}
+.obm-logo,.obm-logo-2{
+    overflow: hidden;
+/*    position: absolute;
+    left: 72%;
+    top: 12%;*/
+    width: 19vw;
+    padding-top: 25%;
+}
+.obm-logo-div-2{
+    display: flex;
+    flex-direction:column;
+}
+.scene-7-subitem{
+    height: 25%;
+    width: 20vw;
+    margin: 5% 0;
+}
+
+.scene-7-subitem:nth-child(1),.scene-7-subitem:nth-child(3),.scene-7-subitem:nth-child(4),.scene-7-subitem:nth-child(5){
+    display: flex;
+    flex-direction: row;
+}
+.every-title{
+    width: 50%;
+    word-break: break-word;
+    font-family: helveticaneue;
+    font-weight: 500;
+    font-size: 3rem;
+}
+.every-paragraph{
+    width: 30%;
+    word-break: break-word;
+    font-weight: 300;
+    font-size: 1.25vw;
+}
+.scene-6-title > h2,.scene-6-text > p{
+    width: 100%;
+}
+.scene-6-title{
+    margin-top: 100%;
+}
+.red-title{
+    font-weight: 700;
+    color: #EA2327;    
+}
+.scene-7-subitem > h2,.scene-7-subitem > p{
+    padding:0;
+    margin: 0; 
+    width: 100%;
+}
+.contact-icon{
+    width: 5vw;
+}
+
+.bg{
+    width: 700vw;
+    z-index: -15;
+    position: absolute;
+    left: 0;
+}
+.bg-img,.bg-img-2,.bg-img-3{
+    position: fixed;
+    z-index: -15;
+}
+.bg-img{
+    opacity: 0.5;
+    width: 500vw;
+}
+.bg-img-2{
+    opacity: 0.7;
+    width: 300vw;
+}
+.bg-img-3{
+    opacity: 0.5;
+    width: 1000vw;    
+}
+.bg-img,.bg-img-2,.bg-img-3{
+    left: 0;
+}
+.arrow{
+    z-index: 500;
+    position: fixed;
+}
+.arrow-left{
+    width: 3%;
+    position: fixed;
+    left: 2vw;
+    z-index: 15000;
+    bottom: 50%;
+    cursor:pointer; 
+}
+.arrow-right{
+    width: 3%;
+    position: fixed;
+    right: 2vw;
+    z-index: 15000;
+    bottom: 50%;
+    cursor:pointer; 
+}
+.active{
+    background-color: #EA2327;
+
+}
+.active-border{
+    border-bottom: 2px solid #EA2327;
+    color:#EA2327;
+}
+.text{
+    margin-top:3vw;
+}
+        .scene-7 .every-title{
+        font-size: 2rem;
+    } 
+            .scene-7-subitem:nth-child(1), .scene-7-subitem:nth-child(3), .scene-7-subitem:nth-child(4), .scene-7-subitem:nth-child(5){
+            margin: 0.5vw 0;
+    }
+
+@media only screen and (min-width:1600px) {
+    /* Style adjustments for viewports that meet the condition */
+    .every-title{
+        width: auto;
+        font-size: 5rem;
+        line-height: 1.2;
+    }
+    .every-paragraph{
+        width: 30%;
+        font-size: 1vw;
+    }
+        .scene-7 .every-title{
+        font-size: 3rem;
+    } 
+        .scene-7-subitem:nth-child(1), .scene-7-subitem:nth-child(3), .scene-7-subitem:nth-child(4), .scene-7-subitem:nth-child(5){
+        margin: 1vw 0;
+    }
+    .scene-6-sub:nth-child(2) {
+    margin: 8vw 0 0;
+}
+.scene-5-text h2 {
+    font-size: 5rem;
+}
+}
+
+@media only screen and (max-width: 1023px){
+    .every-title br{
+        display: none;
+    }
+    .big-image-logo{
+        width: 50vw;
+        position: absolute;
+        left: 0;
+        bottom: 70px;
+    }   
+        .header{
+        height: 70px;
+    }
+      .header{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        /* height: 50px; */
+        /* width: 80vw; */
+        overflow: hidden;
+        background: transparent;
+        opacity: 0.7;
+        z-index: 1000;
+        /* flex-direction: row; */
+        /* display: flex; */
+        border-top: 1px solid #4C4D4F;
+        margin: 0 10%;
+        right: 0;
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        bottom: 35px;
+        right: 0;
+        left: 0;
+        width: auto;
+        /* z-index: 9999; */
+        /* width: 80%; */
+        /* display: flex; */
+        /* align-self: center; */
+        /* justify-content: flex-end; */
+        /* margin: 0 10%; */
+        text-align: center;
+        display: block;
+        margin: 0px;
+    }
+    .menu ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        /* text-align: center; */
+        /* display: flex; */
+        display: inline-block;
+        vertical-align: top;
+    }
+    .menu ul li{
+        /* display: inline; */
+        display: block;
+        margin: 0px;
+        border-left: 1px solid #ffffff;
+        padding: 0 20px;
+        float: left;
+    }
+    .menu li:first-child {
+        border-left: 0;
+        padding-left: 0px;
+    }
+    .menu li:last-child {
+        padding-right: 0;
+    }
+               .scene-2-holobox,.scene-3-holobox,.scene-4-holobox,.scene-5-holobox {
+        bottom: 70px;
+        position: absolute;
+    }
+        .scene-2-character,.scene-3-character,.scene-4-character,.scene-5-character {
+        bottom: 70px;
+        position: absolute;
+    }
+    .scene-7 .every-title{
+        font-size: 2rem;
+    } 
+
+    .scene-7-subitem:nth-child(1), .scene-7-subitem:nth-child(3), .scene-7-subitem:nth-child(4), .scene-7-subitem:nth-child(5){
+        margin: 1vw 0;
+    }
+    .big-image-logo-2 {
+    width: 50vw;
+    /* padding-top: 5%; */
+    bottom: 70px;
+    position: absolute;
+}
+}
+
+
+@media only screen and (max-width:767px) {
+
+
+    .obm-logo-div, .obm-logo-div-2  {
+        width: auto;
+        position: absolute;
+        right: 0;
+        top: 10%;
+        text-align: center;
+    }
+    .obm-logo-div{
+        left: 0;
+    }
+    .obm-logo-div-2 {
+        left: 660vw;
+    }
+    .obm-logo,.obm-logo-2{
+        overflow: hidden;
+        width: 35vw;
+        padding-top: 0px;
+    }
+  
+    .every-title{
+        width: auto;
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+    .every-paragraph{
+        width: 30%;
+        font-size: 1vw;
+    }
+
+    .every-paragraph{
+        width: 60%;
+        font-size: 0.75rem;
+    }
+ 
+
+    .scene-6-video-img {
+    width: 80vw;
+    display: block;
+    }
+    .scene-6-video-div{
+        display: block;
+    }
+    .scene-6-input-div {
+        margin: 10vw 0;
+    }
+    #obmSubscriberInput {
+        width: 50vw;
+    }
+    .scene-6-sub:nth-child(2) {
+    /* flex-direction: column; */
+        margin: 30% 0;
+    }
+    .scene-6-sub:nth-child(1) {
+        width: 75%;
+        margin-top: 5vw;
+    }
+        .scene-6-sub:nth-child(1){
+        width: 75%;
+        margin-top: 5vw;
+    }
+    .scene-6-sub:nth-child(2) {
+    width: 100%;
+    display: block;
+    margin: 5% 0;
+    /* flex-direction: column; */
+    }
+    .scene-6-title {
+    margin-top: 5%;
+    }
+        .scene-container{
+        width: 80%;
+        display: block;
+    }
+    .scene-6 .every-title br{
+        display: none;
+    }
+    .scene-6-video-img{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .scene-6-input-div{
+        max-width: 400px;
+        margin: 30px auto 0;
+    }
+        .obm-logo-div-2{
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+
+    }
+    .scene-7-subitem:nth-child(1){
+        width: 80%;
+    }
+    .scene-7{
+        position: relative;
+    }
+    .big-image-div-2 {
+        position: absolute;
+        bottom: 70px;
+        height: auto;
+    }
+    .scene-7-subitem{
+        width: auto;
+        height: auto;
+    }
+    .scene-7-subitem .every-title{
+        display: none;
+    }
+    .scene-7-subitem p{
+        margin: 2vw 0 3vw;
+        font-size: 1rem;
+    }
+    .scene-7-subitem:nth-child(1), .scene-7-subitem:nth-child(3), .scene-7-subitem:nth-child(4), .scene-7-subitem:nth-child(5) {
+    display: block;
+}
+.contact-icon{
+    width: 10%;
+    margin: 2vw;
+}
+.big-image-logo-2 {
+    width: 40vw;
+    padding-top: 5%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+    .big-image-logo{
+        width: 70vw;
+    }
+    .menu{
+        margin: 0px;
+    }
+    .menu ul li {
+        display: inline;
+        margin: 0px;
+        border-left: 1px solid #ffffff;
+        padding: 0 8px;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 479px) {
+
+    .menu{
+        margin: 0px;
+    }
+    .menu ul li {
+        display: inline;
+        margin: 0px;
+        border-left: 1px solid #ffffff;
+        padding: 0 8px;
+    }
+    .every-title{
+        width: auto;
+        font-size: 10vw;
+        line-height: 1.2;
+        margin: 0;
+    }
+    .every-title br{
+        display: none;
+    }
+
+    .scene-2-character-img,.scene-3-character-img,.scene-4-character-img,.scene-5-character-img{
+        width: 30vw;
+    }
+    .scene-2-holobox-img,.scene-4-holobox-img{
+        width: 30vw;
+    }
+    .scene-3-holobox-img{
+        width: 65vw;
+    }
+    .scene-5-holobox-img{
+        width: 15vw;
+    }
+
+    .scene-4-character-img{
+        width: 50vw;
+    }
+    .scene-5-character-img{
+          width: 50vw;
+    }
+    .scene-2-character{
+        left: 160vw;
+
+    }
+    .scene-3-character{
+        left: 210vw;
+
+    }
+    .scene-4-character{
+        left: 340vw;
+
+    }
+    .scene-5-character{
+    left: 410vw;
+
+    }
+
+
+    .scene-2-holobox{
+        left: 125vw;
+    }
+    .scene-3-holobox{
+        left: 230vw;
+    }
+    .scene-4-holobox{
+        left: 325vw;
+    }
+    .scene-5-holobox{
+        left: 465vw;
+    }
+
+
+    .scene-2-text, .scene-3-text, .scene-4-text, .scene-5-text {
+    z-index: 900;
+    margin: 5vw 0;
+    }
+    .scene-5-text .every-title{
+        font-size: 10vw;
+    }
+
+    .obm-logo-div-2{
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+
+    }
+    .scene-7-subitem:nth-child(1){
+        width: 80%;
+    }
+    .scene-7{
+        position: relative;
+    }
+    .big-image-div-2 {
+        position: absolute;
+        bottom: 70px;
+        height: auto;
+    }
+    .scene-7-subitem{
+        width: auto;
+        height: auto;
+    }
+    .scene-7-subitem .every-title{
+        display: none;
+    }
+    .scene-7-subitem p{
+        margin: 10vw 0 3vw;
+        font-size: 1rem;
+    }
+    .scene-7-subitem:nth-child(1), .scene-7-subitem:nth-child(3), .scene-7-subitem:nth-child(4), .scene-7-subitem:nth-child(5) {
+    display: block;
+    flex-direction: row;
+}
+.contact-icon{
+    width: 20%;
+    margin: 3vw;
+}
+}
